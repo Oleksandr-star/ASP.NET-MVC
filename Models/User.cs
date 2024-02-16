@@ -1,5 +1,4 @@
 ﻿// Models/User.cs
-
 namespace WebApplication2.Models
 {
     public class User
