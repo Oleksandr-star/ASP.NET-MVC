@@ -28,7 +28,6 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public IActionResult ProductCount(User user)
         {
-            // Перенаправляємо на OrderForm, передаючи модель користувача
             return View("OrderForm", user);
         }
 
@@ -37,7 +36,6 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public IActionResult OrderConfirmation(List<Product> products)
         {
-            // Обрабатываем заказ и выводим информацию о заказанных товарах
             return View(products);
         }
     }
