@@ -1,0 +1,10 @@
+﻿@model WebApplication2.Models.User
+
+    <form asp-controller="Home" asp-action="ProductCount" method="post">
+    <label for="ProductCount">
+        Скільки одиниць товару ви бажаєте замовити?
+    </label>
+        <input type="number" name="ProductCount" required />
+        <br /><br />
+        <button type="submit">Submit</button>
+    </form>

@@ -1,0 +1,10 @@
+﻿<!-- Views/Home/OrderConfirmation.cshtml -->
+@model List<WebApplication2.Models.Product>
+
+<h2>Your Order Confirmation</h2>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name - кількість: @product.Quantity</li>
+    }
+</ul>

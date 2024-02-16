@@ -1,0 +1,17 @@
+﻿<!-- Views/Home/OrderForm.cshtml -->
+@model WebApplication2.Models.User
+
+<form asp-controller="Home" asp-action="OrderConfirmation" method="post">
+    @for (int i = 0; i < Model.ProductCount; i++)
+    {
+        <div>
+            <label for="Products[@i].Name">Назва піци:</label>
+            <input type="text" name="Products[@i].Name" required />
+            <br /><br />
+            <label for="Products[@i].Quantity">Кількість:</label>
+            <input type="number" name="Products[@i].Quantity" required />
+            <br /><br />
+        </div>
+    }
+    <button type="submit">Submit</button>
+</form>
