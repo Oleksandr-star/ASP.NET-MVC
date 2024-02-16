@@ -1,0 +1,35 @@
+﻿<!-- Views/File/Products.cshtml -->
+@model List<WebApplication2.Models.Products>
+
+<h2>Product List</h2>
+
+<h3>List Format:</h3>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.ID. @product.Name - @product.Price$ (@product.CreatedDate)</li>
+    }
+</ul>
+
+<h3>Table Format:</h3>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ID</td>
+                <td>@product.Name</td>
+                <td>@product.Price$</td>
+                <td>@product.CreatedDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
