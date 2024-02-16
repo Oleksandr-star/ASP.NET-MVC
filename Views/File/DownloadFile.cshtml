@@ -1,0 +1,29 @@
+﻿<!-- Views/File/DownloadFile.cshtml -->
+@{
+    ViewData["Title"] = "Download File";
+}
+
+<h2>Download File</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<form asp-controller="File" asp-action="DownloadFile" method="post">
+    <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="fileName">File Name:</label>
+        <input type="text" name="fileName" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Continue</button>
+</form>
